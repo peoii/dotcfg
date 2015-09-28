@@ -22,8 +22,9 @@ call vundle#begin()
 	Plugin 'StanAngeloff/php.vim'               " updated PHP
 	"Plugin 'altercation/vim-colors-solarized.git'	" Solarized theme
 	"Plugin 'nathanaelkane/vim-indent-guides.git'	" Show tab/space guides
-    Plugin 'Yggdroot/indentLine'
-	 " All of your Plugins must be added before the following line
+  Plugin 'Yggdroot/indentLine'
+  Plugin 'fatih/vim-go'
+	" All of your Plugins must be added before the following line
 call vundle#end()
 
 
