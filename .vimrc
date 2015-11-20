@@ -28,9 +28,16 @@ call vundle#begin()
   Plugin 'spf13/PIV'
   Plugin 'hail2u/vim-css3-syntax'
   Plugin 'editorconfig/editorconfig-vim'
+  Plugin 'tomasr/molokai'
   " All of your Plugins must be added before the following line
 call vundle#end()
 
+let g:badwolf_darkgutter=1
+let g:badwolf_css_props_highlight=1
+let g:badwolf_html_link_underline=1
+let g:molokai_original=0
+set t_Co=256
+colorscheme badwolf
 
 set backspace=2                 " enable <BS> for everything
 set number                      " Show line numbers
@@ -84,6 +91,5 @@ set showcmd                     " show cmd
 set ruler                       " show cursor line number
 set shm=atI                     " cut large messages
 
-set background=dark
-colorscheme madeofcode
+
 syntax on
