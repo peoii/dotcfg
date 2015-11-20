@@ -39,43 +39,41 @@ let g:molokai_original=0
 set t_Co=256
 colorscheme badwolf
 
-set backspace=2                 " enable <BS> for everything
 set number                      " Show line numbers
+set showcmd                     " show command on last line of screen
+set cursorline                  " Underline the line the cursor is on
+set wildmenu                    " enhanced cmd line completion
+set lazyredraw                  " don't update screen when executing macros
+set showmatch                   " show bracket matches
+set backspace=2                 " enable <BS> for everything
 set completeopt=longest,menuone " Autocompletion options
 set complete=.,w,b,u,t,i,d      " autocomplete options (:help 'complete')
 set hidden                      " hide when switching buffers, don't unload
 set laststatus=2                " always show status line
-set lazyredraw                  " don't update screen when executing macros
-" set mouse=a                   " enable mouse in all modes
 set noshowmode                  " don't show mode, since I'm already using airline
 set nowrap                      " disable word wrap
 set showbreak="+++ "            " String to show with wrap lines
-set showcmd                     " show command on last line of screen
-set showmatch                   " show bracket matches
 set spelllang=en                " spell
 set spellfile=~/.vim/spell/en.utf-8.add
 set textwidth=0                 " don't break lines after some maximum width
 set ttyfast                     " increase chars sent to screen for redrawing
 "set ttyscroll=3                " limit lines to scroll to speed up display
 set title                       " use filename in window title
-set wildmenu                    " enhanced cmd line completion
 set wildchar=<TAB>              " key for line completion
 set noerrorbells                " no error sound
 set splitright                  " Split new buffer at right
 
 " Folding
+set foldenable                  " Enable Folding
 set foldignore=                 " don't ignore anything when folding
 set foldlevelstart=99           " no folds closed on open
-set foldmethod=marker           " collapse code using markers
-set foldnestmax=1               " limit max folds for indent and syntax methods
+set foldmethod=indent           " collapse code using indents
+set foldnestmax=10              " limit max folds for indent and syntax methods
 
 " Tabs
-set autoindent                  " copy indent from previous line
-set expandtab                   " replace tabs with spaces
-set shiftwidth=2                " spaces for autoindenting
-set smarttab                    " <BS> removes shiftwidth worth of spaces
-set softtabstop=4               " spaces for editing, e.g. <Tab> or <BS>
 set tabstop=2                   " spaces for <Tab>
+set softtabstop=2               " spaces for editing, e.g. <Tab> or <BS>
+set expandtab                   " replace tabs with spaces
 
 " Searches
 set hlsearch                    " highlight search results
@@ -92,4 +90,4 @@ set ruler                       " show cursor line number
 set shm=atI                     " cut large messages
 
 
-syntax on
+syntax enable
