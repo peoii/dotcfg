@@ -1,7 +1,7 @@
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# Colourize Things
+# Colourize All the Things
 alias ls='ls -CF --color=auto'
 alias ll='ls -lF --color=auto'
 alias dir='dir --color=auto'
@@ -11,7 +11,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff='colordiff'
 
-# Some defaults
+# Set some sane defaults
 alias df='df -h'
 alias du='du -ch'
 alias mv='mv -v'
@@ -20,6 +20,8 @@ alias rm='rm -v'
 alias ln='ln -v'
 alias diff='diff -u'
 alias free='free -mlth'
+
+# I am seriously lazy
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -79,3 +81,12 @@ alias rm='rm -I --preserve-root'
 
 # Simple system update
 alias upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get autoremove && sudo apt-get autoclean && (sudo npm -g update || true) && (sudo gem update || true)'
+
+alias irssi='/usr/local/bin/irssi'
+
+# Fortune time
+if [ ${TERM} != 'dumb' ]; then
+  if [ -x /usr/games/cowthink -a -x /usr/games/fortune -a -x /usr/games/lolcat ]; then
+    fortune | cowthink | lolcat
+  fi
+fi
