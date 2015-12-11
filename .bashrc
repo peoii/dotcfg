@@ -3,7 +3,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # Colourize All the Things
 alias ls='ls -CF --color=auto'
-alias ll='ls -lF --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
@@ -31,6 +30,13 @@ alias ......='cd ../../../../../..'
 alias .......='cd ../../../../../../..'
 alias ........='cd ../../../../../../../..'
 alias .........='cd ../../../../../../../../..'
+
+# new commands
+alias du1='du --max-depth=1'
+alias ll='ls -lF'
+alias la='ls -A'
+alias pcinfo='inxi -v6 -c10'
+alias grouplist='cut -d: -f1 /etc/group'
 
 # git
 alias gl='git pull'
@@ -82,7 +88,9 @@ alias rm='rm -I --preserve-root'
 # Simple system update
 alias upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get autoremove && sudo apt-get autoclean && (sudo npm -g update || true) && (sudo gem update || true)'
 
+# Use newer version
 alias irssi='/usr/local/bin/irssi'
+
 
 # Fortune time
 if [ ${TERM} != 'dumb' ]; then
