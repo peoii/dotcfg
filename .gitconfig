@@ -1,6 +1,0 @@
-[user]
-	name = Jamie Harrell
-	ename = jharrell@gmail.com
-	email = jharrell@gmail.com
-[credential]
-	helper = cache --timeout=3600
