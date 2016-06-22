@@ -7,39 +7,48 @@ call vundle#begin()
   Plugin 'gmarik/Vundle.vim'
 
   "Put your non-Plugin stuff after this line
-  "Plugin 'Shougo/neocomplete'				" Automatic keyword completion
-  "Plugin 'Shougo/unite.vim'					" Find files and buffers using ag
-  "Plugin 'Shougo/vimfiler.vim'				" File Explorer :VimFiler
-  Plugin 'jlanzarotta/bufexplorer'			" Buffer Explorer :BufExplore
-  Plugin 'godlygeek/tabular'					" Text alignment
-  "Plugin 'majutsushi/tagbar'					" Display tags in a window
-  "Plugin 'scrooloose/syntastic'				" Syntax checking on write
-  Plugin 'tpope/vim-fugitive'					" Git wrapper
-  Plugin 'tpope/vim-surround'					" Manipulate quotes and brackets
-  Plugin 'bling/vim-airline'					" Pretty statusbar
+  Plugin 'jlanzarotta/bufexplorer'          " Buffer Explorer :BufExplore
+  Plugin 'tpope/vim-fugitive'               " Git wrapper
+  Plugin 'vim-airline/vim-airline'          " Pretty statusbar
+  Plugin 'vim-airline/vim-airline-themes'   " Pretty statusbar
   Plugin 'terryma/vim-multiple-cursors'		" Multiple cursors work
-  Plugin 'edkolev/promptline.vim'				" Prompt generator for bash
-  Plugin 'StanAngeloff/php.vim'               " updated PHP
-  "Plugin 'altercation/vim-colors-solarized.git'	" Solarized theme
-  "Plugin 'nathanaelkane/vim-indent-guides.git'	" Show tab/space guides
-  Plugin 'Yggdroot/indentLine'
-  Plugin 'fatih/vim-go'
-  Plugin 'w0ng/vim-hybrid'
-  Plugin 'spf13/PIV'
-  Plugin 'hail2u/vim-css3-syntax'
-  Plugin 'editorconfig/editorconfig-vim'
-  Plugin 'tomasr/molokai'
+  Plugin 'edkolev/promptline.vim'	        " Prompt generator for bash
+  Plugin 'godlygeek/tabular'                " Lineup that text
+  Plugin 'plasticboy/vim-markdown'          " Better Markdown
+  Plugin 'fatih/vim-go'                     " Go Syntax
+  Plugin 'cespare/vim-toml'                 " TOML Syntax
+  Plugin 'pangloss/vim-javascript'          " Better Javascript
+  Plugin 'ryanoasis/vim-devicons'           " Dev Icons
+
+  " Colour schemes
+  Plugin 'ninja/sky'                        " Vim Sky
+  Plugin 'hhsnopek/vim-firewatch'           " An alternative colour scheme
+  Plugin 'sjl/badwolf'                      " My prefered theme
+
   " All of your Plugins must be added before the following line
 call vundle#end()
 
-let g:badwolf_darkgutter=1
-let g:badwolf_css_props_highlight=1
-let g:badwolf_html_link_underline=1
-let g:molokai_original=0
-set t_Co=256
-colorscheme badwolf
+set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline
+set encoding=utf-8
 
-set number                      " Show line numbers
+" let g:badwolf_darkgutter=1
+" let g:badwolf_css_props_highlight=1
+" let g:badwolf_html_link_underline=1
+" let g:molokai_original=0
+set t_Co=256
+" colorscheme badwolf
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+colorscheme sky
+
+let g:airline_theme='murmur'
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline#extensions#tabline#left_sep=''
+let g:airline#extensions#tabline#left_alt_sep=''
+
+" set number                      " Show line numbers
 set showcmd                     " show command on last line of screen
 set cursorline                  " Underline the line the cursor is on
 set wildmenu                    " enhanced cmd line completion
