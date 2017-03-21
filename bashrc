@@ -171,7 +171,7 @@ alias diff='diff -u'
 alias free='free -mlth'
 
 # Never run as root, always sudo
-alias su='sudo bash'
+alias su='su -'
 alias sudo='sudo ' #Fix alias post-sudo
 
 # I am seriously lazy

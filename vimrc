@@ -19,6 +19,7 @@ call vundle#begin()
   Plugin 'cespare/vim-toml'                 " TOML Syntax
   Plugin 'pangloss/vim-javascript'          " Better Javascript
   Plugin 'ryanoasis/vim-devicons'           " Dev Icons
+  Plugin 'editorconfig/editorconfig-vim'    " EditorConfig, standards set by developers
 
   " Colour schemes
   Plugin 'ninja/sky'                        " Vim Sky
