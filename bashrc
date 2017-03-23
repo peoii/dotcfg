@@ -207,6 +207,9 @@ alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG
 # Generate some random passwords
 alias pass='pwgen -s1 18 5'
 
+# Get IPv4 address
+alias ipv4="ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'"
+
 # Create parent directories
 alias mkdir='mkdir -pv'
 
