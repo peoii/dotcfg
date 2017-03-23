@@ -1,6 +1,20 @@
 [user]
-	name = Jamie Harrell
-	ename = jharrell@gmail.com
-	email = jharrell@gmail.com
+  name = Jamie Harrell
+  email = jharrell@gmail.com
+[core]
+  editor = vim
+[color]
+  ui = auto
+
+[url "https://github.com/"]
+  insteadOf = gh
+[credential "https://github.com/"]
+  username = peoii
+
+[url "https://gist.github.com/"]
+  insteadOf = gist
+[credential "https://gist.github.com/"]
+  username = peoii
+
 [credential]
-	helper = cache --timeout=3600
+	helper = store
