@@ -19,7 +19,7 @@ call vundle#begin()
   Plugin 'cespare/vim-toml'                 " TOML Syntax
   Plugin 'pangloss/vim-javascript'          " Better Javascript
   Plugin 'ryanoasis/vim-devicons'           " Dev Icons
-  Plugin 'editorconfig/editorconfig-vim'    " EditorConfig, standards set by developers
+  Plugin 'editorconfig/editorconfig-vim'    " EditorConfig
 
   " Colour schemes
   Plugin 'ninja/sky'                        " Vim Sky
@@ -39,7 +39,6 @@ set encoding=utf-8
 set t_Co=256
 " colorscheme badwolf
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme sky
 
 let g:airline_theme='murmur'

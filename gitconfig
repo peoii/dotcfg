@@ -16,5 +16,10 @@
 [credential "https://gist.github.com/"]
   username = peoii
 
+[url "https://git.browncoat.xyz/"]
+  insteadOf = bc
+[credential "https://git.browncoat.xyz/"]
+  username = jamie
+
 [credential]
 	helper = store
