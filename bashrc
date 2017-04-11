@@ -15,7 +15,7 @@ fi
 export EDITOR='vim'
 export VISUAL='vim'
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin:$HOME/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin:$HOME/bin:/usr/local/go/bin
 
 # cd then ls immediately, show git branch if approperiate
 function cd() {
