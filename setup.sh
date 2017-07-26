@@ -1,4 +1,5 @@
 ln -s $HOME/dotcfg/bashrc $HOME/.bashrc
+ln -s $HOME/dotcfg/bash_aliases $HOME/.bash_aliases
 ln -s $HOME/dotcfg/vimrc $HOME/.vimrc
 ln -s $HOME/dotcfg/rtorrent.rc $HOME/.rtorrent.rc
 ln -s $HOME/dotcfg/gitconfig $HOME/.gitconfig 
