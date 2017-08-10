@@ -24,14 +24,27 @@ alias sudo='sudo ' #Fix alias post-sudo
 
 # I am seriously lazy
 alias cd..='cd ..'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../../..'
-alias .......='cd ../../../../../../..'
-alias ........='cd ../../../../../../../..'
-alias .........='cd ../../../../../../../../..'
+
+for ((i=2; i <= 8; i++))
+do
+  unset DD
+  unset DDS
+  for ((j=0; j < i; j++))
+  do
+    DD="${DD}../"
+    DDS="${DDS}."
+  done
+  alias "$DDS"="cd $DD"
+done
+
+#alias ..='cd ..'
+#alias ...='cd ../..'
+#alias ....='cd ../../..'
+#alias .....='cd ../../../..'
+#alias ......='cd ../../../../../..'
+#alias .......='cd ../../../../../../..'
+#alias ........='cd ../../../../../../../..'
+#alias .........='cd ../../../../../../../../..'
 
 # new commands
 alias du1='du --max-depth=1'
@@ -77,7 +90,8 @@ alias servicelist='systemctl --no-page --no-legend --plain -t service --state=ru
 alias uncomment="grep -vE '^#|^$' "
 
 # I hate Mondays...
-alias fuck='sudo $(history -p \!\!)'
+#alias fuck='sudo $(history -p \!\!)'
+eval $(thefuck --alias)
 
 # Octal permissions
 alias operms="stat -c '%A %a %n' "
