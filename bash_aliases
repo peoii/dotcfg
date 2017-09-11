@@ -90,8 +90,8 @@ alias servicelist='systemctl --no-page --no-legend --plain -t service --state=ru
 alias uncomment="grep -vE '^#|^$' "
 
 # I hate Mondays...
-#alias fuck='sudo $(history -p \!\!)'
-eval $(thefuck --alias)
+alias fuck='sudo $(history -p \!\!)'
+#eval $(thefuck --alias)
 
 # Octal permissions
 alias operms="stat -c '%A %a %n' "
