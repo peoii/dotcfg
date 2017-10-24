@@ -9,10 +9,8 @@ call vundle#begin()
   "Put your non-Plugin stuff after this line
   Plugin 'jlanzarotta/bufexplorer'          " Buffer Explorer :BufExplore
   Plugin 'tpope/vim-fugitive'               " Git wrapper
-  Plugin 'vim-airline/vim-airline'          " Pretty statusbar
-  Plugin 'vim-airline/vim-airline-themes'   " Pretty statusbar
-  Plugin 'terryma/vim-multiple-cursors'		" Multiple cursors work
-  Plugin 'edkolev/promptline.vim'	        " Prompt generator for bash
+  Plugin 'terryma/vim-multiple-cursors'		  " Multiple cursors work
+  Plugin 'edkolev/promptline.vim'	          " Prompt generator for bash
   Plugin 'godlygeek/tabular'                " Lineup that text
   Plugin 'plasticboy/vim-markdown'          " Better Markdown
   Plugin 'fatih/vim-go'                     " Go Syntax
@@ -20,11 +18,13 @@ call vundle#begin()
   Plugin 'pangloss/vim-javascript'          " Better Javascript
   Plugin 'ryanoasis/vim-devicons'           " Dev Icons
   Plugin 'editorconfig/editorconfig-vim'    " EditorConfig
+  Plugin 'itchyny/lightline.vim'            " Lightline, it's simple and does just what it does
+  Plugin 'airblade/vim-gitgutter'           " GitGutter
+  Plugin 'nathanaelkane/vim-indent-guides'  " Indenting is a PITA.
 
   " Colour schemes
   Plugin 'ninja/sky'                        " Vim Sky
-  Plugin 'hhsnopek/vim-firewatch'           " An alternative colour scheme
-  Plugin 'sjl/badwolf'                      " My prefered theme
+  Plugin 'dracula/vim'                      " Dracula!
 
   " All of your Plugins must be added before the following line
 call vundle#end()
@@ -32,21 +32,18 @@ call vundle#end()
 set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline
 set encoding=utf-8
 
-" let g:badwolf_darkgutter=1
-" let g:badwolf_css_props_highlight=1
-" let g:badwolf_html_link_underline=1
-" let g:molokai_original=0
-set t_Co=256
-" colorscheme badwolf
+if !has('gui_running')
+  set t_Co=256
+endif 
 
 colorscheme sky
+set background=dark
 
-let g:airline_theme='murmur'
-let g:airline_powerline_fonts = 1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline#extensions#tabline#left_sep=''
-let g:airline#extensions#tabline#left_alt_sep=''
+let g:lightline = { 'colorscheme': 'Dracula',}
+
+let g:indent_guides_guide_size = 1
+"let g:indent_guides_color_change_percent = 3
+let g:indent_guides_enable_on_vim_startup = 1
 
 " set number                      " Show line numbers
 set showcmd                     " show command on last line of screen
@@ -91,9 +88,9 @@ set ignorecase                  " case insensitive searching
 set smartcase                   " override ignorecase if upper case typed
 set more                        " Stop in list
 
-" Status bar -> Replace with vim-airplane plugin
+" Status bar
 set laststatus=2                " show ever
-set showmode                    " show mode
+set noshowmode                    " show mode
 set showcmd                     " show cmd
 set ruler                       " show cursor line number
 set shm=atI                     " cut large messages
